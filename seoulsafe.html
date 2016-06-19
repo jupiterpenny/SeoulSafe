@@ -72,7 +72,9 @@ h3{
 
 .module {
   background: url(http://www.worldpropertyjournal.com/news-assets/City-of-Seoul-South-Korea-keyimage.jpg);
-   background-size: 100%;
+  background-attachment: fixed;
+  width: 400px;
+  height: 300px;
   position: relative;
   overflow: hidden;
   margin: 20px;
@@ -119,6 +121,37 @@ h3{
   box-sizing: border-box;
 }
 
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900);
+
+body {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://images.trvl-media.com/media/content/shared/images/travelguides/destination/178308/Seoul-30295.jpgg);
+  background-size: cover;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+p {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
 
             </style>
@@ -163,14 +196,10 @@ h3{
     	<div class="page-header" id="home">
    </div>
    
-   <div class="module">
-  
-  <header>
-    <h1>
-      How can you sleep in a city that never does? 
-    </h1>
-  </header>
-</div>
+   <header>
+  <h1>How can you sleep in a city that never does?</h1>
+  <p>Sleep safe with Seoul Safe</p>
+</header>
     
   </div>
 </section>
@@ -256,7 +285,18 @@ h3{
        <br>
 			</div>
        <h3> Security</h3>
-       <p>INSERT STATISTICS HERE WHY WE NEED</p>
+       
+        <div class="module">
+  
+  <header>
+    <h1>
+     Be safe with Seoul Safe 
+    </h1>
+  </header>
+</div>
+       
+       
+       
         </section>
         </div>
       
