@@ -69,9 +69,8 @@ h3{
 	color: white;
 	text-align: center;
 }
-
 .module {
-  background: url(http://www.worldpropertyjournal.com/news-assets/City-of-Seoul-South-Korea-keyimage.jpg);
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
   background-attachment: fixed;
   width: 400px;
   height: 300px;
@@ -87,28 +86,19 @@ h3{
   padding: 20px 10px;
   background: inherit;
   background-attachment: fixed;
-  overflow: hidden;
 }
 .module > header::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: inherit;
-  background-attachment: fixed;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
-.module > header::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25)
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  transform: scale(2) translateY(20px);
 }
 .module > header > h1 {
   margin: 0;
@@ -119,6 +109,113 @@ h3{
 
 * {
   box-sizing: border-box;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Expletus+Sans:600);
+/*==========SCALE-IN==========*/
+@-webkit-keyframes scale-in {
+     0%   {transform: scale(10, 10); opacity: 0;}
+    100% {transform: scale(1, 1); opacity: 1;}
+}
+
+@keyframes scale-in {
+    0%   {transform: scale(10, 10); opacity: 0;}
+    100% {transform: scale(1, 1);  opacity: 1;}
+}
+/*==========ROLL-OUT==========*/
+@-webkit-keyframes roll-out {
+    0%   {width: 0;}
+    100% {width: 100%; }
+}
+@keyframes roll-out {
+    0%   {width: 0;}
+    100% {width: 100%; }
+}
+body{
+   background: #392f28;
+}
+main{
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Expletus Sans', cursive;
+}
+.hero{
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  text-align: center;
+  margin: 0 auto;
+  background: #392f28;
+  position: relative; 
+  color: #392f28;
+}
+
+.hero h1{
+  font-size: 4.1em;
+  margin: auto;
+  position: absolute; 
+  top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.hero p{
+  font-size: 1.5em;
+  margin: auto;
+  position: absolute; 
+  top: 220px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+   z-index: 1;
+}
+.hero img{
+  width: 100%;
+}
+.bar{
+  width: 100%;
+  height: 200px;
+  background: -moz-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: -webkit-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: -ms-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: linear-gradient(161deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  opacity: 0.3;
+  position: absolute; 
+  z-index: 0;
+  left: 0;
+  top: 90px;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+   -webkit-animation: roll-out 1.2s ease-out ;
+  -moz-animation: roll-out 1.2s ease-out ;
+    animation: roll-out 1.2s ease-out ; 
+}
+.hero h1, .hero p{
+  -webkit-animation: scale-in 1.3s ease-out;
+  -moz-animation: scale-in 1.3s  ease-out;
+    animation: scale-in 1.3s ease-out; 
+}
+
+
+@media all and (max-width: 768px) {
+  .hero{
+    height: 50vw;
+  }
+  .bar{
+    height: 26vw;
+    top: 10vw;
+  }
+  .hero h1{
+    font-size: 8vw;
+    top: 13vw;
+  }
+  .hero p{
+    font-size: 3vw;
+    top: 27vw;
+  }
+ 
 }
 
 
@@ -166,10 +263,15 @@ h3{
     	<div class="page-header" id="home">
    </div>
    
-   <header>
-  <h1>How can you sleep in a city that never does?</h1>
-  <p>Sleep safe with Seoul Safe</p>
-</header>
+ <main>
+  <div class="hero">
+    <h1>How can you sleep in a city that never does?</h1>
+    <p>Sleep safe with Seoul Safe </p>
+    <img src="https://namu.wiki/file/파일:Seoul.jpg" />
+     <div class="bar"></div>
+  </div>
+ 
+</main
     
   </div>
 </section>
@@ -255,12 +357,11 @@ h3{
        <br>
 			</div>
        <h3> Security</h3>
-       
-        <div class="module">
+    <div class="module">
   
   <header>
     <h1>
-     Be safe with Seoul Safe 
+     Be Safe with Seoul Safe 
     </h1>
   </header>
 </div>
