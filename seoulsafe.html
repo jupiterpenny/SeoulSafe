@@ -70,39 +70,55 @@ h3{
 	text-align: center;
 }
 
-.hero-unit img {
- width: 100%; height: auto;   
-}			
+.module {
+  background: url(http://www.worldpropertyjournal.com/news-assets/City-of-Seoul-South-Korea-keyimage.jpg);
+  background-attachment: fixed;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+}
+.module > header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: inherit;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.module > header::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.module > header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25)
+}
+.module > header > h1 {
+  margin: 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
 
- line-height: 1.75em;
-    font-weight: 200;
-    text-align: center;
-    margin-bottom: 2rem; }
- 
-  @media only screen and (min-width: 40.063em) {
-    .hero .tech-img {
-      height: 18rem;
-      width: 18rem; }
-    .hero h1 {
-      padding-top: 4.5rem;
-      text-align: right;
-      font-size: 2.5rem; }
-    .hero p {
-      text-align: right; } }
-
-.hero {
-  background: url('http://www.worldpropertyjournal.com/news-assets/City-of-Seoul-South-Korea-keyimage.jpg') no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  &:before {
-    content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
-		opacity: .8; 
+* {
+  box-sizing: border-box;
 }
 
 
@@ -147,13 +163,16 @@ h3{
     
     <section class="hero">
     	<div class="page-header" id="home">
-    		</div>
-  <div class="row intro">
-  	<img src ="http://www.worldpropertyjournal.com/news-assets/City-of-Seoul-South-Korea-keyimage.jpg"></img>
-    <div class="small-centered medium-uncentered medium-6 large-7 columns">
-      <h1>How can you sleep in a city that never does?</h1>
-      <p> Sleep well, with Seoul Safe</p>
-    </div>
+   </div>
+   
+   <div class="module">
+  
+  <header>
+    <h1>
+      How can you sleep in a city that never does? 
+    </h1>
+  </header>
+</div>
     
   </div>
 </section>
