@@ -132,12 +132,12 @@ h3{
     100% {width: 100%; }
 }
 body{
-   background: #white;
+   background: white;
 }
 main{
   width: 100%;
   overflow: hidden;
-  font-family: 'Expletus Sans', cursive;
+  font-family: cursive;
 }
 .hero{
   width: 100%;
@@ -173,13 +173,30 @@ main{
 .hero img{
   width: 100%;
 }
-
+.bar{
+  width: 100%;
+  height: 200px;
+  background: -moz-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: -webkit-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: -ms-linear-gradient(289deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  background: linear-gradient(161deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+  opacity: 0.3;
+  position: absolute; 
+  z-index: 0;
+  left: 0;
+  top: 90px;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+   -webkit-animation: roll-out 1.2s ease-out ;
+  -moz-animation: roll-out 1.2s ease-out ;
+    animation: roll-out 1.2s ease-out ; 
+}
 .hero h1, .hero p{
   -webkit-animation: scale-in 1.3s ease-out;
   -moz-animation: scale-in 1.3s  ease-out;
     animation: scale-in 1.3s ease-out; 
 }
-
 
 
 @media all and (max-width: 768px) {
@@ -200,7 +217,6 @@ main{
   }
  
 }
-
 
 
 
@@ -248,9 +264,9 @@ main{
    
  <main>
   <div class="hero">
-<p> </p>
+    <h1></h1>
     <p>How can you sleep in a city that never does?</p>
-    <img src="https://www.google.co.kr/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiF3IuAtbTNAhVClJQKHSuiDAEQjRwIBw&url=http%3A%2F%2Fwww.conradseoul.co.kr%2F&psig=AFQjCNFGX-fGfrz6yuEuOzPo1fxfupDquw&ust=1466434931416046" />
+    <img src="http://seouldelegates.org/wp/wp-content/uploads/2014/07/Complete-Night-View-of-Seoul-Street2-1024x682.jpg" />
      <div class="bar"></div>
   </div>
  
